@@ -1,12 +1,4 @@
-[org 0x0100]
-mov ax, 3508h
-int 21h
-mov word [old_isr], bx
-mov word [old_isr+2], es
-jmp start
-; ==========================================================
-; === MULTITASKING MUSIC KERNEL (INTERRUPT HANDLER) ===
-; ==========================================================
+
 ; Variable to store the original BIOS timer interrupt address
 old_isr: dd 0
 ; Timer logic variables
